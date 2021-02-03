@@ -9,7 +9,7 @@ function mostrar()
 	nombre = document.getElementById("txtIdNombre").value;
 	edad = document.getElementById("txtIdEdad").value;
 
-	alert("Su nombre es " + nombre + " y tiene " + edad + " años");
+	alert(`Su nombre es ${nombre} y tiene ${edad} años`);
 
 	document.getElementById("txtIdNombre").value = "";
 	document.getElementById("txtIdEdad").value = "";
