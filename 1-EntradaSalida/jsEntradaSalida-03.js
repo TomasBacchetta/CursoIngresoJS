@@ -7,11 +7,11 @@ function mostrar()
 {
 	let nombre;
 
-	nombre = document.getElementById("txtIdNombre").value;
+	nombre = document.getElementById('txtIdNombre').value;
 	
 	alert(nombre);
 
-	document.getElementById("txtIdNombre").value = "";
+	document.getElementById('txtIdNombre').value = "";
 
 
 }

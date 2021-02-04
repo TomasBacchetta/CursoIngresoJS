@@ -10,7 +10,7 @@ function mostrarAumento()
 	
 	importe = parseInt(document.getElementById("txtIdImporte").value);
 
-	document.getElementById("txtIdResultado").value = importe - (importe * 0.75);
+	document.getElementById("txtIdResultado").value = importe - (importe * 0.25);
 
 	document.getElementById("txtIdImporte").value = "";
 

@@ -12,12 +12,15 @@ function SacarResto()
 	let resto;
 
 	dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
+	
 	divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
 
 	resto = dividendo % divisor;
 
 	alert(resto);
+	
 	document.getElementById("txtIdNumeroDividendo").value = "";
+	
 	document.getElementById("txtIdNumeroDivisor").value = "";
 	
 
