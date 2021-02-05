@@ -44,8 +44,8 @@ function CalcularPrecio ()
             descuento = 20;
         }
     }
-        if (cantidadLamparas == 3){
-        
+    
+    if (cantidadLamparas == 3){
         if (marca == "ArgentinaLuz"){
             descuento = 15;
         } else {
@@ -55,20 +55,21 @@ function CalcularPrecio ()
                 descuento = 5;
             }
         }
-  
-    }
+     }
 
     
     monto = PRECIO * cantidadLamparas;
+    
     montoConDescuento = monto - (monto * descuento / 100);
     
     if (montoConDescuento > 120){
         impuesto = montoConDescuento * (IIBB / 100);
+        
         montoConImpuesto = montoConDescuento + impuesto;
         
         document.getElementById('txtIdprecioDescuento').value = montoConImpuesto;
-        alert("IIBB: Usted pago " + montoConImpuesto + " pesos, siendo " + impuesto + " pesos el impuesto que se pagó.");
         
+        alert("IIBB: Usted pago " + montoConImpuesto + " pesos, siendo " + impuesto + " pesos el impuesto que se pagó.");
     } else {
         document.getElementById('txtIdprecioDescuento').value = montoConDescuento;
     }
