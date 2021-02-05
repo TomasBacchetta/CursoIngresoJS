@@ -11,22 +11,27 @@ function Rectangulo ()
     var perimetro;
     var cantidadAlambre; 
     
-    largo = parseInt(document.getElementById('txtIdLargo').value);
-    ancho = parseInt(document.getElementById('txtIdAncho').value);
-    perimetro = (2 * largo) + (2 * ancho);
+    largo = document.getElementById('txtIdLargo').value;
+    largo = parseInt(largo);
+    ancho = document.getElementById('txtIdAncho').value;
+    ancho = parseInt(ancho);
+    perimetro = (largo + ancho) * 2;
     cantidadAlambre = perimetro * 3;
     alert("Necesitará " + cantidadAlambre + " metros de alambre para su terreno rectangular");
+
 }
 
 function Circulo () 
 {
-    const PI = 3.14159265;
+    const PI = 3.1415;
     var radio;
     var cantidadAlambre;
     
-    radio = parseInt(document.getElementById('txtIdRadio').value);
-    cantidadAlambre = parseInt(2 * PI * radio);
+    radio = document.getElementById('txtIdRadio').value;
+    radio = parseInt(radio);
+    cantidadAlambre = (2 * PI * radio) * 3;
     alert("Necesitará " + cantidadAlambre + " metros de alambre para su terreno circular");
+
 }
 
 function Materiales () 
@@ -37,8 +42,10 @@ function Materiales ()
     var cantidadCemento;
     var cantidadCal;
     
-    largo = parseInt(document.getElementById('txtIdLargo').value);
-    ancho = parseInt(document.getElementById('txtIdAncho').value);
+    largo = document.getElementById('txtIdLargo').value;
+    largo = parseInt(largo);
+    ancho = document.getElementById('txtIdAncho').value;
+    ancho = parseInt(ancho);
     area = largo * ancho;
     cantidadCemento = area * 2;
     cantidadCal = area * 3;

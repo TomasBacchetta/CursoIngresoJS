@@ -13,10 +13,14 @@ function mostrarAumento()
 	var aumento;
 	var sueldoFinal;
 	
-	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
+	sueldo = document.getElementById("txtIdSueldo").value;
 	
+	sueldo = parseInt(sueldo);
+
 	aumento = prompt("Ingrese el porcentaje de aumento: ");
 	
+	aumento = parseInt(aumento);
+
 	sueldoFinal = sueldo + (sueldo * (aumento / 100));
 	
 	document.getElementById("txtIdResultado").value =  sueldoFinal;

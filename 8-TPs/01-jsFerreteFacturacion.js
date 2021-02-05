@@ -10,9 +10,12 @@ function Sumar ()
     let precioTres;
     let resultadoSuma;
 
-    precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-    precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-    precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+    precioUno = document.getElementById('txtIdPrecioUno').value;
+    precioUno = parseInt(precioUno);
+    precioDos = document.getElementById('txtIdPrecioDos').value;
+    precioDos = parseInt(precioDos);
+    precioTres = document.getElementById('txtIdPrecioTres').value;
+    precioTres = parseInt(precioTres);
     resultadoSuma = precioUno + precioDos + precioTres;
 
     alert("La suma de todos los precios es de: " + resultadoSuma + " pesos");
@@ -24,9 +27,12 @@ function Promedio ()
     let precioTres;
     let resultadoPromedio;
 
-    precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-    precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-    precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+    precioUno = document.getElementById('txtIdPrecioUno').value;
+    precioUno = parseInt(precioUno);
+    precioDos = document.getElementById('txtIdPrecioDos').value;
+    precioDos = parseInt(precioDos);
+    precioTres = document.getElementById('txtIdPrecioTres').value;
+    precioTres = parseInt(precioTres);
     resultadoPromedio = (precioUno + precioDos + precioTres)/3;
 
     alert("El promedio de todos los precios es de: " + resultadoPromedio + " pesos");
@@ -38,10 +44,13 @@ function PrecioFinal ()
     let precioTres;
     let resultadoFinal;
 
-    precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-    precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-    precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
-    resultadoFinal = (precioUno + precioDos + precioTres)*1.21;
+    precioUno = document.getElementById('txtIdPrecioUno').value;
+    precioUno = parseInt(precioUno);
+    precioDos = document.getElementById('txtIdPrecioDos').value;
+    precioDos = parseInt(precioDos);
+    precioTres = document.getElementById('txtIdPrecioTres').value;
+    precioTres = parseInt(precioTres);
+    resultadoFinal = (precioUno + precioDos + precioTres) * 1.21;
 
     alert("La suma de todos los precios es de: " + resultadoFinal + " pesos");
 
