@@ -25,7 +25,7 @@ function CalcularPrecio ()
 
     marca = document.getElementById('Marca').value;
 
-    if (cantidadLamparas >= 6){
+    if (cantidadLamparas > 6 || cantidadLamparas == 6){
         descuento = 50;
     }
 
