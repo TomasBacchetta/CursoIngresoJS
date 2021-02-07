@@ -24,55 +24,55 @@ function CalcularPrecio ()
     cantidadLamparas = parseInt(cantidadLamparas);
 
     marca = document.getElementById('Marca').value;
-
-    if (cantidadLamparas > 2 && cantidadLamparas < 6){ // entre 3 y 5 lampáras incluidas
-        switch(cantidadLamparas){
-            case 5:
-                if (marca == "ArgentinaLuz"){
-                    descuento = 40;
-                
-                } else {
-                    descuento = 30;
-                
-                }
-                break;
-
-            case 4:
-                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
-                    descuento = 25;
-                break;
-                
-                } else {
-                    descuento = 20;
-                
-                }
-           
-            default:                     //por defecto 3
-                switch (marca){
-                    case "ArgentinaLuz":
-                        descuento = 15; 
-                        break;
-
-                    case "FelipeLamparas":
-                        descuento = 10;
-                        break;
-                    
-                    default:
-                        descuento = 5;
-                   
-                }
-        }
-    
-    } else {
-        if (cantidadLamparas > 5){      //para 6 o mas lamparas
-            descuento = 50;
+    switch(cantidadLamparas){
         
-        } else {
-            descuento = 0;
+        case 5:
+            if (marca == "ArgentinaLuz"){
+                descuento = 40;
+            
+            } else {
+                descuento = 30;
+            
+            }
+            break;
+        
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                descuento = 25;
+        
+                
+            } else {
+                descuento = 20;
+                
+            }
+            break;
+        
+        case 3:
+            switch (marca){
+                
+                case "ArgentinaLuz":
+                    descuento = 15; 
+                    break;
+
+                case "FelipeLamparas":
+                    descuento = 10;
+                    break;
+                
+                default:
+                    descuento = 5;
+            break;
+        
         }
-    
-    }
-    
+        
+        default:
+            if (cantidadLamparas > 5){
+                descuento = 50;
+            } else {
+                descuento = 0;
+            }
+        }
+ 
+
     monto = PRECIO * cantidadLamparas;
     
     montoConDescuento = monto - (monto * descuento / 100);
