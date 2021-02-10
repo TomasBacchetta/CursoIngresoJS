@@ -1,6 +1,12 @@
+/* generar numero aleatorio de 1 a 10 inclusive */
+
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	let numeroAleatorio;
+	
+	numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+	
+	console.log(numeroAleatorio);
 
-}//FIN DE LA FUNCIÓN
+
+}
