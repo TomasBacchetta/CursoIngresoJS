@@ -19,26 +19,17 @@ function mostrar()
 			break;
 		
 		case 'Abril':
-			dias = 30;
-			break;
-
 		case 'Junio':
-			dias = 30;
-			break;
-
 		case 'Septiembre':
-			dias = 30;
-			break;
-
 		case 'Noviembre':
 			dias = 30;
 			break;
-
+		
 		default:
 			dias = 31;
 			break;
 	}
 	
 	alert("Este mes tiene " + dias + " días.");
-	
+
 }
