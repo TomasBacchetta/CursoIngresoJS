@@ -9,9 +9,10 @@ function mostrar()
 	const PRECIOBASE = 15000;
 	let estacion;
 	let destino;
-	let porcentajeAumento = 0;
-	let porcentajeDescuento = 0;
+	let porcentaje;
 	let precioNeto;
+
+	porcentaje = 100;
 
 	estacion = document.getElementById('txtIdEstacion').value;
 
@@ -21,15 +22,15 @@ function mostrar()
 		case 'Invierno':
 			switch (destino){
 				case 'Mar del plata':
-					porcentajeDescuento = 20;
+					porcentaje -= 20;
 					break;
 
 				case 'Bariloche':
-					porcentajeAumento = 20;
+					porcentaje += 20;
 					break;
 
 				default:
-					porcentajeDescuento = 10;
+					porcentaje -= 10;
 					break;
 				
 			}
@@ -38,15 +39,15 @@ function mostrar()
 		case 'Verano':
 			switch (destino){
 				case 'Bariloche':
-					porcentajeDescuento = 20;
+					porcentaje -= 20;
 					break;
 
 				case 'Mar del plata':
-					porcentajeAumento = 20;
+					porcentaje += 20;
 					break;
 					
 				default:
-					porcentajeAumento = 10;
+					porcentaje += 10;
 					break;
 			
 			}
@@ -57,7 +58,7 @@ function mostrar()
 				case 'Bariloche':
 				case 'Mar del plata':
 				case 'Cataratas':
-				porcentajeAumento = 10;
+					porcentaje += 10;
 				break;
 
 			}
@@ -65,7 +66,7 @@ function mostrar()
 	
 	}
 
-	precioNeto = PRECIOBASE + (porcentajeAumento * PRECIOBASE / 100) - (porcentajeDescuento * PRECIOBASE / 100);
+	precioNeto = PRECIOBASE * porcentaje / 100;
 	
 
 	alert("Para ir a " + destino + " en " + estacion + " deberá abonar " + precioNeto + " pesos.");
