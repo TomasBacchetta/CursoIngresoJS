@@ -7,6 +7,7 @@ function mostrar()
 {
 	let clave;
 
+	
 	while (clave != "utn750"){
 		clave = prompt("Ingrese la clave");
 	
