@@ -17,7 +17,7 @@ function SacarResto()
 
 	resto = dividendo % divisor;
 
-	alert(resto);
+	alert("El resto es de: " + resto);
 	
 	document.getElementById("txtIdNumeroDividendo").value = "";
 	
