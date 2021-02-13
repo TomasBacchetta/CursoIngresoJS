@@ -11,14 +11,21 @@ function mostrar()
 	var numeroMinimo;
 	var respuesta;
 	
+	
 	banderaDelPrimero = 1;
 	respuesta='si';
 	
-	while(respuesta=="si")
-	{
+	while(respuesta=="si") {
 		numeroIngresado = prompt("Ingrese un número");
+		
 		numeroIngresado = parseInt(numeroIngresado);
 
+		while(isNaN(numeroIngresado) == true){ 
+			numeroIngresado = prompt("Error. Ingrese un número válido");
+			numeroIngresado = parseInt(numeroIngresado);
+			
+		}
+		
 		if (banderaDelPrimero == 1){ 
 		numeroMaximo = numeroIngresado;
 		
