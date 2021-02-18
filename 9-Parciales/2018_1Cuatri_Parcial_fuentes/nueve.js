@@ -47,7 +47,7 @@ function mostrar()
             
         }
 
-        peso = prompt("Ingrese el peso del producto (entre 1 y 100)");
+        peso = prompt("Ingrese el peso del producto #" + contadorProductos + " (entre 1 y 100):");
         peso = parseInt(peso);
 
         while (isNaN(peso) == true || peso < 1 || peso > 100){
@@ -56,7 +56,7 @@ function mostrar()
             
         }
 
-        temperatura = prompt("Ingrese la temperatura de almacenamiento (entre -30 y 30 grados)");
+        temperatura = prompt("Ingrese la temperatura de almacenamiento del producto #" + contadorProductos + " (entre -30 y 30 grados)");
         temperatura = parseInt(temperatura);
 
         while (isNaN(temperatura) == true || temperatura < -30 || temperatura > 30){
@@ -94,6 +94,11 @@ function mostrar()
                     if (peso < menorPeso){
                         menorPeso = peso;
         
+                    } else {
+                        if (marca != marcaPesado){
+                            marcaPesado = marcaPesado + ", " + marca; //para multiples marcas del mismo peso
+                        }
+                        
                     }
         
                 }
