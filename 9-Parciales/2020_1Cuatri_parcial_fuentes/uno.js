@@ -43,7 +43,6 @@ function mostrar()
 	
 	contadorAlcohol = 0;
 
-	
 	cantBarbijo = 0;
 	
 	cantJabon = 0;
@@ -117,9 +116,13 @@ function mostrar()
 						masBaratoAlcohol = precio;
 						unidadesMasBaratoAlcohol = cantUnidades;
 						fabricanteAlcoholMasBarato = fabricante;
+					
 					}
+				
 				}
+				
 				break;
+		
 		}
 
 		
