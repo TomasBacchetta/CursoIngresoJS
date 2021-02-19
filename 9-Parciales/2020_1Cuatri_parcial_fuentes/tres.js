@@ -23,7 +23,7 @@ function mostrar()
 	let mayorTemperatura;
 	let nombreMayorTemperatura;
 	let contadorMayorDeEdadViudo;
-	let viejoFiebre;
+	let contadorViejoFiebre;
 	let contadorHombreViudo;
 	let contadorHombreSoltero;
 	let sumatoriaEdadHombreSolteros;
@@ -39,6 +39,8 @@ function mostrar()
 
 	contadorHombreSoltero = 0;
 
+	sumatoriaEdadHombreSolteros = 0;
+
 	contadorHombreViudo = 0;
 	
 	respuesta = "si";
@@ -49,7 +51,7 @@ function mostrar()
 		nombre = prompt("Ingrese el nombre del pasajero #" + contador + ":");
 
 		while (isNaN(nombre) == false){
-			nombre = ("Incorrecto! Ingrese el nombre del pasajero #" + contador + ":");
+			nombre = prompt("Incorrecto! Ingrese el nombre del pasajero #" + contador + ":");
 		
 		}
 
@@ -104,18 +106,51 @@ function mostrar()
 			}
 		
 		}
-		//seguir aca
+		
+		switch(estadoCivil){
+			case "soltero":
+				if (sexo == "m"){
+					contadorHombreSoltero = contadorHombreSoltero + 1;
+					sumatoriaEdadHombreSolteros = sumatoriaEdadHombreSolteros + edad;
+
+				}
+				
+				break;
+		
+			case "viudo":
+				if (sexo == "m"){
+					contadorHombreViudo = contadorHombreViudo + 1;
+
+				}
+				
+				if (edad > 20){
+					contadorMayorDeEdadViudo = contadorMayorDeEdadViudo + 1;
+
+				}
+				
+				break;
+		
+		}
+
+		if (edad > 59 && temperaturaCorporal > 38){
+			contadorViejoFiebre = contadorViejoFiebre + 1;
+
+		}
+
 	}
 
+	promedioHombresSolteros = sumatoriaEdadHombreSolteros / contadorHombreSoltero;
+	
+	cantidadHombreSolterosOViudos = contadorHombreSoltero + contadorHombreViudo;
+
 	document.write(
-		"La persona con mayor temperatura es " + nombreMayorTemperatura + "<br>" 
+		"La persona con mayor temperatura es " + nombreMayorTemperatura + "<br>" +
+		"La cantidad de mayores de edad viudos es " + contadorMayorDeEdadViudo + "<br>" +
+		"La cantidad de hombres solteros o viudos es " + cantidadHombreSolterosOViudos + "<br>" +
+		"La cantidad de personas de la 3era edad con fiebre es de " + contadorViejoFiebre + "<br>" + 
+		"El promedio de edad entre los hombres solteros es de " + promedioHombresSolteros
 
-
-
-	
-	
-	
-	);
+		);
 	
 
 }
