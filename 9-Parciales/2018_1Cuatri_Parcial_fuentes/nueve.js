@@ -43,7 +43,7 @@ function mostrar()
         marca = prompt("Ingrese la marca del producto #" + contadorProductos + ":");
 
         while (isNaN(marca) == false){
-            marca = prompt("Ingrese el nombre de la marca #" + contadorProductos + "!!");
+            marca = prompt("Ingrese el nombre de la marca #" + contadorProductos + " sin números!!");
             
         }
 
@@ -96,12 +96,14 @@ function mostrar()
         
                     } else {
                         if (marca != marcaPesado){
-                            marcaPesado = marcaPesado + ", " + marca; //para multiples marcas del mismo peso
+                            marcaPesado = marcaPesado + ", " + marca; //para múltiples marcas del mismo peso
+                        
                         }
                         
                     }
         
                 }
+                
                 break;
 
         }
@@ -116,16 +118,16 @@ function mostrar()
         }
     
     }
-
+    
     promedioPesos = acumuladorPesos / contadorProductos;
 
     document.write(
 		"La cantidad de temperaturas pares: " + cantidadTempPares + "<br>" +
-		"La marca del modelo más pesado es: " + marcaPesado + "<br>" + 
+		"La/s marca/s del modelo más pesado es: " + marcaPesado + "<br>" + 
 		"La cantidad de productos que se conservan a menos de 0 grados: " + cantidadConserva + "<br>" +
 		"El promedio del peso de todos los productos es: " + promedioPesos + "<br>" +
         "El peso máximo registrado es " + mayorPeso + ", y el menor es " + menorPeso
     
-        );
+    );
 
 }
