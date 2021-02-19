@@ -104,7 +104,7 @@ function mostrar()
 			}
 		
 		}
-
+		//seguir aca
 	}
 
 	document.write(
