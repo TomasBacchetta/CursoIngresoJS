@@ -130,7 +130,7 @@ function mostrar()
   
   } else {
     if (cantBolsasTotales > 10){
-      descuento = 15
+      descuento = 15;
     
     }
   
