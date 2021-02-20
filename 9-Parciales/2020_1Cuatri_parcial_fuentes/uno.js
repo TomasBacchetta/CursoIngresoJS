@@ -106,22 +106,14 @@ function mostrar()
 				contadorAlcohol = contadorAlcohol + 1;
 				cantAlcohol = cantAlcohol + cantUnidades;
 				
-				if (contadorAlcohol == 1){
+				if (contadorAlcohol == 1 || precio < masBaratoAlcohol){
 					masBaratoAlcohol = precio;
 					unidadesMasBaratoAlcohol = cantUnidades;
 					fabricanteAlcoholMasBarato = fabricante;
 				
-				} else {
-					if (precio < masBaratoAlcohol){
-						masBaratoAlcohol = precio;
-						unidadesMasBaratoAlcohol = cantUnidades;
-						fabricanteAlcoholMasBarato = fabricante;
-					
-					}
-				
-				}
+				} 
 				break;
-		
+				
 		}
 
 		
