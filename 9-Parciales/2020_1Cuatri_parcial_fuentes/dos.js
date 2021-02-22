@@ -136,7 +136,6 @@ function mostrar()
   
   }
 
-  descuento = parseInt(descuento);
   importeTotalConDescuento = importeTotal - (importeTotal * descuento / 100);
 
   if (cantBolsasArena > cantBolsasCal && cantBolsasArena > cantBolsasCemento){

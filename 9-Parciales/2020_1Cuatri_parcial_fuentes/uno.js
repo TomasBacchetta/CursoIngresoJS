@@ -62,7 +62,7 @@ function mostrar()
 		precio = prompt("Ingrese el precio del producto #" + contador + " (entre 100 y 300");
 		precio = parseInt(precio);
 
-		while (isNaN(precio) == true || (precio < 100 && precio > 300)){
+		while (isNaN(precio) == true || precio < 100 || precio > 300){
 			precio = prompt("Incorrecto! Ingrese el precio del producto #" + contador + " (entre 100 y 300");
 			precio = parseInt(precio);
 
