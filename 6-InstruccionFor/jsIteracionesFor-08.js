@@ -15,7 +15,7 @@ function mostrar()
 	var limite;
 	numeroIngresado=prompt("ingrese numero");//5
 	//for desde el 2 hasta uno antes del numero ingresado
-	limite=(numeroIngresado/2);
+	limite=(numeroIngresado/2); //podria ser directamente numeroIngresado pero esto ahorra procesos
 	for(numeroAnterior=2;numeroAnterior<limite;numeroAnterior++)
 	{
 		if(numeroIngresado% numeroAnterior==0 )

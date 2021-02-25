@@ -36,20 +36,16 @@ function mostrar()
 			if (banderaMinimo == 0){
 				menorPares = numeroIngresado;
 				banderaMinimo = 1;
-			
 			} else {
 				if (numeroIngresado < menorPares){
 					menorPares = numeroIngresado;
-				
 				}
-			
 			}
 			
 			if (numeroIngresado < 0){ //si siendo par es negativo
 				if (banderaMaximo == 0){
 					mayorNegativos = numeroIngresado;
 					banderaMaximo = 1;
-				
 				} else {
 					if (numeroIngresado > mayorNegativos){
 						mayorNegativos = numeroIngresado;
@@ -62,15 +58,18 @@ function mostrar()
 		
 		} else {
 			if (numeroIngresado < 0){ // si no es par pero es negativo
-				if (banderaMaximo == 0){
+				if (y == 0){
 					mayorNegativos = numeroIngresado;
 					banderaMaximo = 1;
 				
 				} else {
-					if (numeroIngresado > mayorNegativos);
-				
+					if (numeroIngresado > mayorNegativos){
+						mayorNegativos = numeroIngresado;
+						
+					}
 				}
-			
+				
+
 			}
 
 		}
