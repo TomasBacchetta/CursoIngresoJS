@@ -2,20 +2,25 @@
 Bacchetta, Tomás
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.
+(el menor de los pares y el mayor de los negativos ...solo si hay)
 */
 function mostrar()
 {	
-	var banderaDelPrimero;
 	var numeroIngresado;
-	var numeroMaximo;
-	var numeroMinimo;
+	var mayorNegativos;
+	var menorPares;
 	var respuesta;
+	var y;
+	var banderaMaximo;
+	var banderaMinimo;
 	
-	
-	banderaDelPrimero = 1;
+	banderaMaximo = 0;
+	banderaMinimo = 0;
 	respuesta='si';
+
+
 	
-	while(respuesta=="si") {
+	for (y = 0; respuesta == "si"; y++){
 		numeroIngresado = prompt("Ingrese un número");
 		
 		numeroIngresado = parseInt(numeroIngresado);
@@ -26,23 +31,48 @@ function mostrar()
 			
 		}
 		
-		if (banderaDelPrimero == 1){ 
-		numeroMaximo = numeroIngresado;
 		
-		numeroMinimo = numeroIngresado;
-		
-		banderaDelPrimero = 0;
-		
-		}
-
-		if (numeroIngresado > numeroMaximo){
-			numeroMaximo = numeroIngresado;
-		
-		} else {
-			if (numeroIngresado < numeroMinimo){
-				numeroMinimo = numeroIngresado;
+		if (numeroIngresado % 2 == 0){ //si es par
+			if (banderaMinimo == 0){
+				menorPares = numeroIngresado;
+				banderaMinimo = 1;
+			
+			} else {
+				if (numeroIngresado < menorPares){
+					menorPares = numeroIngresado;
+				
+				}
 			
 			}
+			
+			if (numeroIngresado < 0){ //si siendo par es negativo
+				if (banderaMaximo == 0){
+					mayorNegativos = numeroIngresado;
+					banderaMaximo = 1;
+				
+				} else {
+					if (numeroIngresado > mayorNegativos){
+						mayorNegativos = numeroIngresado;
+					
+					}
+
+				}
+				
+			}
+		
+		} else {
+			if (numeroIngresado < 0){ // si no es par pero es negativo
+				if (banderaMaximo == 0){
+					mayorNegativos = numeroIngresado;
+					banderaMaximo = 1;
+				
+				} else {
+					if (numeroIngresado > mayorNegativos);
+				
+				}
+			
+			}
+
 		}
 
 		respuesta=prompt("desea continuar? (si/no)");
@@ -53,13 +83,12 @@ function mostrar()
 		}
 
 		console.log(numeroIngresado);
-		console.log(numeroMaximo);
-		console.log(numeroMinimo);
+		console.log(mayorNegativos);
+		console.log(menorPares);
 
+	}
 	
-}
-
-	document.getElementById('txtIdMaximo').value = numeroMaximo;
-	document.getElementById('txtIdMinimo').value = numeroMinimo;
+	document.getElementById('txtIdMaximo').value = mayorNegativos;
+	document.getElementById('txtIdMinimo').value = menorPares;
 
 }
