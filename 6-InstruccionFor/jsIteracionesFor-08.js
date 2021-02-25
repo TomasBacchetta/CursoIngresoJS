@@ -15,8 +15,8 @@ function mostrar()
 	var limite;
 	numeroIngresado=prompt("ingrese numero");//5
 	//for desde el 2 hasta uno antes del numero ingresado
-	limite=(numeroIngresado/2); //podria ser directamente numeroIngresado pero esto ahorra procesos
-	for(numeroAnterior=2;numeroAnterior<limite;numeroAnterior++)
+
+	for(numeroAnterior=2;numeroAnterior<numeroIngresado;numeroAnterior++)
 	{
 		if(numeroIngresado% numeroAnterior==0 )
 		{
@@ -24,7 +24,7 @@ function mostrar()
 		}
 	}
 
-	if(numeroAnterior==limite)
+	if(numeroAnterior==numeroIngresado)
 	{
 		alert("es primo");
 	}else
