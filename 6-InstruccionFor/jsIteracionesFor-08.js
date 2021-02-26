@@ -12,7 +12,7 @@ function mostrar()
 
 	var numeroIngresado;
 	var numeroAnterior;
-	var limite;
+	
 	numeroIngresado=prompt("ingrese numero");//5
 	//for desde el 2 hasta uno antes del numero ingresado
 
