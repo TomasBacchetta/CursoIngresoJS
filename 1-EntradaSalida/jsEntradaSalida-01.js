@@ -36,6 +36,7 @@ function mostrar() {
 	let contadorHombres;
 	let contadorMujeres;
 	let personasDeMasUnoSesenta;
+	let contadorMujeresMasDeUnoSesenta;
 	let promedioEdadHombres;
 	let promedioEdadMujeres;
 	let porcentajeMujeresSobreTotal;
@@ -45,6 +46,7 @@ function mostrar() {
 	acumuladorEdadHombres = 0;
 	acumuladorEdadMujeres = 0;
 	personasDeMasUnoSesenta = 0;
+	contadorMujeresMasDeUnoSesenta = 0;
 
 	respuesta = "si";
 
@@ -93,6 +95,10 @@ function mostrar() {
 	
 				}
 				
+				if (altura > 1.6){
+					contadorMujeresMasDeUnoSesenta = contadorMujeresMasDeUnoSesenta + 1;
+
+				}
 				acumuladorEdadMujeres = acumuladorEdadMujeres + edad;
 
 				break;
@@ -135,7 +141,7 @@ function mostrar() {
 			
 		}
 
-		if (altura > 1.6){
+		if (altura > 1.60){
 			personasDeMasUnoSesenta = personasDeMasUnoSesenta + 1;
 
 		}
@@ -160,12 +166,38 @@ function mostrar() {
 
 	}
 
-	promedioEdadHombres = acumuladorEdadHombres / contadorHombres;
-	console.log (contadorHombres);
+	if (contadorHombres != 0){
+		promedioEdadHombres = acumuladorEdadHombres / contadorHombres;
+		
 	
-	promedioEdadMujeres = acumuladorEdadMujeres / contadorMujeres;
+	} else {
+		promedioEdadHombres = "NO HUBO HOMBRES";
+		nombreHombreMasBajo = "NO HUBO HOMBRES";
+		
+	}
 
-	porcentajeMujeresSobreTotal = contadorMujeres * 100 / personasDeMasUnoSesenta;
+	if (contadorMujeres != 0){
+		promedioEdadMujeres = acumuladorEdadMujeres / contadorMujeres;
+	
+	} else {
+		promedioEdadMujeres = "NO HUBO MUJERES";
+
+	}
+
+	if (personasDeMasUnoSesenta != 0){
+		porcentajeMujeresSobreTotal = contadorMujeresMasDeUnoSesenta * 100 / personasDeMasUnoSesenta;
+
+	} else {
+		porcentajeMujeresSobreTotal = "NO SE PUDO CALCULAR"
+	
+	}
+
+	
+
+
+	
+	
+	
 	
 	document.write(
 		nombreMayorAltura + ", de sexo " + sexoEntero + ", es la persona con mayor altura.<br>" +
